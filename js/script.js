@@ -5,16 +5,17 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'message to print',
-            imgLink: 'https://picsum.photos/200/300'
+            message: 'title via vue',
+            imgLink: 'https://picsum.photos/200/400'
+
         };
     },
     methods: {
         newImage() {
             console.time('loadpic')
             console.log('hi')
-            //necessary to refresh link from lorem picsum
-            this.imgLink = 'https://picsum.photos/200/400'
+            //using a flip flop-like method to ensure img refresh
+            this.imgLink = this.imgLink === 'https://picsum.photos/200/400' ? 'https://picsum.photos/200/401' : 'https://picsum.photos/200/400'
             console.timeEnd('loadpic')
 
         }
