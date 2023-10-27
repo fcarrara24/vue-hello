@@ -1,0 +1,35 @@
+.hoverable-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flippable{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: rotateCarousel 0.8s;
+    
+}
+
+.antiFlippable{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: antiRotateCarousel 0.8s;
+    
+}
+
+@keyframes rotateCarousel {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+
+@keyframes antiRotateCarousel {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(+360deg);
+    }
+}
