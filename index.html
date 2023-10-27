@@ -11,8 +11,11 @@
 <body>
     <div id="app">
         <h1>{{message}}</h1>
-    </div>
 
+        <button @click="newImage">Generate Image</button>
+
+        <img :src="imgLink" alt="image not found" srcset="">
+    </div>
 </body>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
